@@ -1,14 +1,19 @@
 import React from 'react';
-import CourseIndex from './CourseIndex';
-// import './App.css'; // Import global styles if needed
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CourseDetails from './components/CourseDetails';
+import Courses from './components/Courses';
+import PaidCourses from './components/PaidCourses'; // Make sure this import is correct if you have this component
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <CourseIndex />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/courses/:id" element={<CourseDetails />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/paid-courses" element={<PaidCourses />} /> {/* Add this only if PaidCourses is defined */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
