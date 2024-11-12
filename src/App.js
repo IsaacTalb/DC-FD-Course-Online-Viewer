@@ -11,6 +11,7 @@ const App = () => {
         <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/paid-courses" element={<PaidCourses />} /> {/* Add this only if PaidCourses is defined */}
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
   );
