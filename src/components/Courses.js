@@ -7,7 +7,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await api.get('/courses'); // Make sure this matches your API endpoint
+        const response = await api.get('/api/courses'); // Make sure this matches your API endpoint
         console.log("Fetched Courses:", response.data); // Log data to check if it’s coming through
         setCourses(response.data.data);
       } catch (error) {

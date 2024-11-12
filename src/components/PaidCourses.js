@@ -7,7 +7,7 @@ const PaidCourses = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await api.get('/PaidCourses');
+        const response = await api.get('/api/PaidCourses');
         setPosts(response.data.data);
       } catch (error) {
         console.error("Error fetching Paid Courses posts", error);
