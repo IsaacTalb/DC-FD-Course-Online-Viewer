@@ -8,12 +8,13 @@ const Blog = () => {
     const fetchBlogs = async () => {
       try {
         const response = await api.get('/api/blogs');
+        console.log("API Response:", response); // Log the response here
         setBlogs(response.data.data);
       } catch (error) {
         console.error("Error fetching blog posts", error);
       }
     };
-
+  
     fetchBlogs();
   }, []);
 
