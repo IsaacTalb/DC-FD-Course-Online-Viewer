@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CourseDetails from './components/CourseDetails';
 import Courses from './components/Courses';
 import PaidCourses from './components/PaidCourses'; // Make sure this import is correct if you have this component
+import Blog from './components/Blog';
 
 const App = () => {
   return (
